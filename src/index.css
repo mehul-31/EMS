@@ -1,0 +1,68 @@
+@import "tailwindcss";
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+  line-height: 1.5;
+  font-weight: 400;
+}
+
+body {
+  margin: 0;
+  min-width: 320px;
+  min-height: 100vh;
+  background: #000;
+  color: white;
+}
+
+#tasklist::-webkit-scrollbar{
+  display: none;
+}
+
+/* Responsive styles */
+@media (max-width: 1024px) {
+  .w-\[calc\(25\%-20px\)\] {
+    width: calc(33.33% - 20px);
+  }
+}
+
+@media (max-width: 768px) {
+  .w-\[calc\(25\%-20px\)\] {
+    width: calc(50% - 20px);
+  }
+}
+
+@media (max-width: 480px) {
+  .w-\[calc\(25\%-20px\)\] {
+    width: calc(100% - 20px);
+  }
+  
+  .text-2xl {
+    font-size: 1.25rem;
+  }
+  
+  .p-5 {
+    padding: 1rem;
+  }
+}
+
+/* Task card responsive styles */
+.task-card {
+  transition: transform 0.2s;
+}
+
+.task-card:hover {
+  transform: translateY(-5px);
+}
+
+/* Button hover effects */
+button {
+  transition: all 0.3s ease;
+}
+
+button:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
